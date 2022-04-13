@@ -224,8 +224,8 @@
       <ul class="social">
         {% for name, link in SOCIAL %}
           <li>
-            <a {% if name == 'mastodon' %}rel="me"{% endif %} class="sc-{{ name }}" href="{{ link }}" target="_blank">
-              <i class="{% if name in ['envelope', 'rss'] %}fas{% else %}fab{% endif %} fa-{{ name }}"></i>
+            <a href="{{ link }}">
+              <img src="images/{{ name }}.png" alt="{{ name }}"/>
             </a>
           </li>
         {% endfor %}
@@ -302,5 +302,12 @@
   {% endif %}
 
   {% block additional_js %}{% endblock %}
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.scrollzer.min.js"></script>
+    <script src="js/publications.js"></script>
+    <!--<script src="js/enforce-tls.js"></script>-->
+
+    <script src="js/main.js"></script>
 </body>
 </html>
